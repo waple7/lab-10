@@ -1,31 +1,31 @@
 #include<stdio.h>
 #include<String.h>
 
-void DelSpace(char* str, int ind)
+void Delete(char* string, int j)
 {
     int i;
-    if ((str[ind]==' ')&&(str[ind+1])==' ')
-        DelSpace(str,ind+1);
-    for (i = ind; i < strlen(str)-1; i++)
+    if ((string[j]==' ')&&(string[j+1])==' ')
+        Delete(string,j+1);
+    for (i = j; i < strlen(string)-1; i++)
     {
-        str[i]=str[i+1];
+        string[i]=string[i+1];
     }
-    str[i]=0;
+    string[i]=0;
 
 }
 
 int main()
 {
 
-    char str[256]="123412 134312  3242342";
+    char string[256]="123412 134312  3242342";
     int i;
 
-    for (i=0;i<strlen(str);i++)
-    { if ((str[i]==' ')&&(str[i+1]==' '))
-            DelSpace(str,i+1);
+    for (i=0;i<strlen(string);i++)
+    { if ((string[i]==' ')&&(string[i+1]==' '))
+            Delete(string,i+1);
     }
     printf("string:\n");
-    printf("%s\n",str);
+    printf("%s\n",string);
 
     return 0;
 }
