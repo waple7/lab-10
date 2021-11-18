@@ -17,14 +17,17 @@ void Delete(char* string, int j)
 int main()
 {
 
-    char string[256]="123412 134312  3242342";
+    char string[256];
+    char *string1;
+    printf("string:\n");
+    string1=gets(string);
     int i;
 
     for (i=0;i<strlen(string);i++)
     { if ((string[i]==' ')&&(string[i+1]==' '))
             Delete(string,i+1);
     }
-    printf("string:\n");
+    printf("string result:\n");
     printf("%s\n",string);
 
     return 0;
