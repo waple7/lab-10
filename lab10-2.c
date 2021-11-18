@@ -17,7 +17,7 @@ void DelSpace(char* str, int ind)
 int main()
 {
 
-    char str[256]="  123412 134312  3242342  ";
+    char str[256]="123412 134312  3242342";
     int i;
 
     for (i=0;i<strlen(str);i++)
