@@ -24,6 +24,7 @@ int main()
     { if ((str[i]==' ')&&(str[i+1]==' '))
             DelSpace(str,i+1);
     }
+    printf("string:\n");
     printf("%s\n",str);
 
     return 0;
